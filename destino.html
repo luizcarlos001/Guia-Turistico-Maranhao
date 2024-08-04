@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destino.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="icon" href="img/4f3bb538bab4706f073a821136128361-icone-de-traco-colorido-da-localizacao-do-mapa.webp" type="Logo">
+    <title>Guia Maranhão</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><i class="fas fa-map-marker-alt"></i> Guia Maranhão</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="nav-item"><a href="destino.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinos</a></li>
+                    <li class="nav-item"><a href="turismo.html" class="nav-link"><i class="fas fa-plane"></i> Turismo</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="login.html"><i class="fas fa-user"></i> Entrar</a></button>
+            </div>
+
+
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                <li class="nav-item"><a href="destino.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinos</a></li>
+                <li class="nav-item"><a href="turismo.html" class="nav-link"><i class="fas fa-plane"></i> Turismo</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="login.html"><i class="fas fa-user"></i> Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="destinos">
+            <br>
+            <h2>Explore os Destinos do Maranhão</h2>
+            <br><br>
+            <div class="busca-filtros">
+                <div class="pesquisa">
+                    <input type="text" id="busca-destino" placeholder="Pesquise por destino...">
+                    <button id="btn-pesquisa">Pesquisar</button>
+                </div>
+                <div class="filtros">
+                    <select id="filtro-municipio">
+                        <option value="">Todos os Municípios</option>
+                        <option value="Barreirinhas">Barreirinhas</option>
+                        <option value="São Luís">São Luís</option>
+                        <option value="Alcântara">Alcântara</option>
+                    </select>
+                </div>
+            </div>
+            <div class="lista-destinos" id="lista-destinos">
+            </div>
+        </section>
+
+        <div class="modal" id="modal-destino">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-titulo"></h2>
+                <img id="modal-imagem" src="" alt="">
+                <p id="modal-descricao"></p>
+                <div class="modal-botoes">
+                    <button id="btn-favoritar" class="btn">Favoritar</button>
+                    <button id="btn-saiba-mais" class="btn">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Seu Guia Turístico Maranhense</p>
+    </footer>
+
+    <script src="destino.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

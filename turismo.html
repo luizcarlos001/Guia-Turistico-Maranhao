@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="turismo.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="icon" href="img/4f3bb538bab4706f073a821136128361-icone-de-traco-colorido-da-localizacao-do-mapa.webp" type="Logo">
+    <title>Guia Maranhão</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><i class="fas fa-map-marker-alt"></i> Guia Maranhão</h1>
+            </div>
+            <div class="nav-list">
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="nav-item"><a href="destino.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinos</a></li>
+                    <li class="nav-item"><a href="turismo.html" class="nav-link"><i class="fas fa-plane"></i> Turismo</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="login.html"><i class="fas fa-user"></i> Entrar</a></button>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="/img/menu_white_36dp.svg" alt=""></button>+
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                <li class="nav-item"><a href="destino.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinos</a></li>
+                <li class="nav-item"><a href="turismo.html" class="nav-link"><i class="fas fa-plane"></i> Turismo</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="login.html"><i class="fas fa-user"></i> Entrar</a></button>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+    <script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "/img/menu_white_36dp.svg";
+                console.log("Menu fechado");
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "/img/close_white_36dp.svg";
+                console.log("Menu aberto");
+            }
+        }
+    </script>
+</body> 
+
+<main>
+    <section class="banner">
+      <img src="./img/pikaso_texttoimage_35mm-film-photography-Aweinspiring-4K-aerial-shot-.jpeg" alt="Imagem de um ponto turístico do Maranhão">
+      <div class="banner-texto">
+        <h2>Bem-vindo ao Maranhão!</h2>
+        <p>Descubra as belezas naturais, a cultura vibrante e a história rica do nosso estado.</p>
+        <a href="destino.html" class="btn">Explore agora</a>
+      </div>
+    </section>
+
+    <section class="destaques">
+      <h2>Destaques do Maranhão</h2>
+      <div class="destaque">
+        <a href="https://pt.wikipedia.org/wiki/Parque_Nacional_dos_Len%C3%A7%C3%B3is_Maranhenses" target="_blank">
+            <img src="/img/pikaso_texttoimage_Aweinspiring-4K-aerial-shot-of-the-Lenis-Maranhens.jpeg" alt="Imagem de um ponto turístico">
+            <h3>Lençóis Maranhenses</h3>
+        </a>
+        <p>Um deserto de dunas brancas com lagoas de água doce cristalina que se formam na temporada de chuvas.</p>
+    </div>
+    
+    <div class="destaque">
+        <a href="https://pt.wikipedia.org/wiki/Alc%C3%A2ntara_(Maranh%C3%A3o)" target="_blank">
+            <img src="./img/alcantara.jpeg" alt="Imagem de um ponto turístico">
+            <h3>Alcântara</h3>
+        </a>
+        <p>Cidade histórica com ruínas coloniais e igrejas dos séculos <br> XVII e XVIII.</p>
+    </div>
+    
+    <div class="destaque">
+        <a href="https://pt.wikipedia.org/wiki/Centro_Hist%C3%B3rico_de_S%C3%A3o_Lu%C3%ADs" target="_blank">
+            <img src="./img/centrohistorico.jpeg" alt="Imagem de um ponto turístico">
+            <h3>Centro Histórico de São Luís</h3>
+        </a>
+        <p>Patrimônio Mundial da UNESCO, com arquitetura colonial portuguesa, casarões coloridos e azulejos tradicionais.</p>
+    </div>
+    </section>
+
+    <section class="sobre">
+      <h2>Sobre o Maranhão</h2>
+      <p>Aqui você encontrará informações detalhadas sobre o estado do Maranhão, sua história, cultura, gastronomia e muito mais.</p>
+      <a href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" class="btn">Saiba mais</a>
+    </section>
+    <br>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Seu Guia Turístico Maranhense</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="icon" href="img/4f3bb538bab4706f073a821136128361-icone-de-traco-colorido-da-localizacao-do-mapa.webp" type="Logo">
+    <title>Guia Maranhão</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><i class="fas fa-map-marker-alt"></i> Guia Maranhão</h1>
+            </div>
+            <div class="nav-list">
+                <ul class="nav">
+                    <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="nav-item"><a href="destino.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinos</a></li>
+                    <li class="nav-item"><a href="turismo.html" class="nav-link"><i class="fas fa-plane"></i> Turismo</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button>
+                    <a href="login.html"><i class="fas fa-user"></i> Entrar</a>
+                </button>
+            </div>
+    
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon" src="/img/menu_white_36dp.svg" alt="Menu">
+                </button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                <li class="nav-item"><a href="destino.html" class="nav-link"><i class="fas fa-map-marked-alt"></i> Destinos</a></li>
+                <li class="nav-item"><a href="turismo.html" class="nav-link"><i class="fas fa-plane"></i> Turismo</a></li>
+            </ul>
+    
+            <div class="login-button">
+                <button><a href="login.html"><i class="fas fa-user"></i> Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo ao Guia Maranhão</h1>
+                <p>Explore as belezas naturais, a cultura vibrante e a história rica do nosso estado.</p>
+                <a href="turismo.html" class="btn"><i class="fas fa-plane"></i>Descubra os Destinos</a>
+            </div>
+            <div class="hero-image">
+                <img src="./img/medium-shot-women-wearing-vacation-outfits.jpg" alt="Imagem do Maranhão">
+            </div>
+        </section>
+
+        <section class="map-container">
+            <h1>Explore agora!</h1>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Seu Guia Turístico Maranhense</p>
+      </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
